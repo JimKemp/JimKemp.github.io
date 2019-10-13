@@ -1,9 +1,31 @@
 *, html  {
   margin:0;
-  paddig:0;
+  padding:0;
 }
 
-p {
-  font-family: Arial, sans-serif;
-  float: center;
+.navbar {
+  background-color: #49617d;
+  color: white;
+
+}
+
+.navbar-brand {
+  background-color: #49617d;
+  color: #fafafa;
+}
+
+.navbar-brand:hover {
+  color: #b8b8b8;
+}
+
+.nav-link {
+  color: #fafafa;
+  font-size: 10pt;
+  text-transform: none;
+}
+
+.nav-link:hover {
+  color: #b8b8b8;
+  font-size: 10pt;
+  text-transform: none;
 }
