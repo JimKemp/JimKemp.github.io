@@ -37,12 +37,12 @@
 
 #about-me {
   background-color: #b8b8b8;
-  border: 50px;
   float: left;
   height: 35vh;
-  margin-top: -350px;
+
   margin-left: 35vh;
-  width: 60%;
+  position: relative;
+  top: -350px;
 
 }
 
