@@ -57,7 +57,28 @@
 }
 
 #about-site {
-  color: red;
+  color: black;
+  background-color: #fafafa;
   position: relative;
-  top: 0px;
+  top: 660px;
+  height: 300px;
+  margin-top: -300px;
+  text-align: center;
+}
+
+#nText {
+  background-color: #fafafa;
+}
+
+.text-block {
+  background-color: #eaeaea;
+  padding: 4px;
+}
+
+div.text-block {
+  border: 2px solid #b8b8b8;
+}
+
+.link {
+  color: #49617d;
 }
