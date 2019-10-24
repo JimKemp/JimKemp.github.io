@@ -47,3 +47,17 @@
   height: 150px;
   width: 190px;
 }
+
+.timeline {
+  font-size: 8pt;
+  color: #707070;
+}
+
+.text-block {
+  background-color: #eaeaea;
+  padding: 4px;
+}
+
+div.text-block {
+  border: 2px solid #b8b8b8;
+}
