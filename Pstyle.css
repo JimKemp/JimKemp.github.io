@@ -1,7 +1,7 @@
 *, html  {
   margin:0;
   padding:0;
-  background-color: #b8b8b8;
+  background-color: #fafafa;
 }
 
 .navbar {
@@ -35,29 +35,15 @@
   font-size: 22px;
 }
 
-#about-me {
-  background-color: #b8b8b8;
-  border: 50px;
-  float: left;
-  height: 35vh;
-  margin-top: -350px;
-  margin-left: 35vh;
-  width: 60%;
-
+.link {
+  color: #49617d;
 }
 
-#portrait {
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 20px;
-  margin-top: 10px;
-
-  height: 35vh;
-  float: left;
+.descrip {
+  margin: 45px;
 }
 
-#about-site {
-  color: red;
-  position: relative;
-  top: 0px;
+.img {
+  height: 150px;
+  width: 190px;
 }
