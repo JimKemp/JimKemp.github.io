@@ -25,6 +25,14 @@
   text-transform: none;
 }
 
+.self-nav-link {
+   color: #fafafa;
+  font-size: 10pt;
+  text-transform: none;
+  text-decoration: underline white;
+}
+
+
 .nav-link:hover {
   color: #b8b8b8;
   font-size: 10pt;
