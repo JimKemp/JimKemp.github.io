@@ -58,16 +58,15 @@
 
 #about-site {
   color: black;
-  background-color: #fafafa;
-  position: relative;
-  top: 660px;
-  height: 300px;
-  margin-top: -300px;
+  background-color: #b8b8b8;
+  margin-top: 100px;
   text-align: center;
+  margin-bottom: -20px;
 }
 
 #nText {
-  background-color: #fafafa;
+  background-color: #b8b8b8;
+  margin-top: -175px;
 }
 
 .text-block {
@@ -81,4 +80,13 @@ div.text-block {
 
 .link {
   color: #49617d;
+}
+
+.bar {
+  margin-top: 500px;
+  height: 2px;
+  width: 80%;
+  background-color: #b8b8b8;
+  margin-left: auto;
+  margin-right: auto;
 }
