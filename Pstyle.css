@@ -13,6 +13,7 @@
 .navbar-brand {
   background-color: #49617d;
   color: #fafafa;
+  font-size: 24pt;
 }
 
 .navbar-brand:hover {
