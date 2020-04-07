@@ -81,4 +81,12 @@ div.text-block {
 
 .current_page {
   color: #fafafa;
+}
+#court {
+  height: 240px;
+  width: 140px;
+  position: absolute;
+  left: 47px;
+  top: 340px
+}
 
