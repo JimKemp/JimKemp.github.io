@@ -46,6 +46,11 @@
 
 }
 
+#update_message {
+  position: absolute;
+  top: 500px
+}
+
 #portrait {
   margin-left: 20px;
   margin-right: 20px;
