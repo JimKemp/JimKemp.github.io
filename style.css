@@ -1,17 +1,24 @@
+:root {
+  --tan: #f8f3ea
+  --blue: #00283c
+  --green: #304d30
+  --red: #803d3b
+}
+
 *, html  {
   margin:0;
   padding:0;
-  background-color: #fafafa;
+  background-color: var(--tan);
 }
 
 .navbar {
-  background-color: #49617d;
+  background-color: var(--blue);
   color: white;
 
 }
 
 .navbar-brand {
-  background-color: #49617d;
+  background-color: var(--blue);
   color: #fafafa;
 }
 
@@ -36,7 +43,7 @@
 }
 
 #about-me {
-  background-color: #fafafa;
+  background-color: var(--tan);
   float: left;
   height: 35vh;
 
@@ -74,7 +81,7 @@
 }
 
 .text-block {
-  background-color: #eaeaea;
+  background-color: var(--tan);
   padding: 4px;
 }
 
