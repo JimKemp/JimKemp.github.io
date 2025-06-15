@@ -8,7 +8,7 @@
 *, html  {
   margin:0;
   padding:0;
-  background-color: #53FF3F;
+  background-color: var(--tan);
 }
 
 .navbar {
@@ -97,7 +97,7 @@ div.text-block {
   margin-top: 500px;
   height: 2px;
   width: 80%;
-  background-color: #b8b8b8;
+  background-color: var(--tan);
   margin-left: auto;
   margin-right: auto;
 }
