@@ -1,8 +1,8 @@
 :root {
-  --tan: #f8f3ea
-  --blue: #00283c
-  --green: #304d30
-  --red: #803d3b
+  --tan: #f8f3ea;
+  --blue: #00283c;
+  --green: #304d30;
+  --red: #803d3b;
 }
 
 *, html  {
