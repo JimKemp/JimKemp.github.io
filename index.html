@@ -60,7 +60,7 @@
             margin-top: 0rem;
             margin-bottom: 2rem;
         }
-/* === PORTFOLIO GALLERY GRID === */
+    /* === PORTFOLIO GALLERY GRID === */
 
 .portfolio-gallery {
     margin-top: 4rem;
@@ -69,56 +69,86 @@
 }
 
 .gallery-category {
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 }
 
-/* Override the narrow, centered h2 rules */
+/* 1. Decreased Section Title Font Size */
 main article h2.gallery-title {
     max-width: 100%;
     margin-left: 0 !important;
     text-align: left;
-    font-size: 2.2rem;
+    font-size: 1.6rem; /* Decreased from 2.2rem */
     color: var(--sidebar-color);
     margin-bottom: 1.5rem;
-    /* Removed the bottom border line */
 }
 
+/* 2. Responsive Grid Setup */
 .project-grid {
     display: grid;
-    /* Scaled down to ~75% (from 280px to 210px) */
-    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-    gap: 2rem;
+    gap: 1.5rem;
+    /* Default for mobile: 1 column */
+    grid-template-columns: 1fr; 
 }
 
-/* The Card Itself */
+/* For tablets (stacks nicely before going full wide) */
+@media (min-width: 600px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* For wide screens (desktop) */
+@media (min-width: 1024px) {
+    /* Puts Technical and Work categories side-by-side */
+    .gallery-top-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem; /* Space between the two categories */
+    }
+
+    /* Force exact columns for specific sections */
+    .project-grid.two-cols {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-grid.four-cols {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* 3. The Card and Text Box Formatting */
 .project-card {
     display: flex;
     flex-direction: column;
     text-decoration: none;
-    /* Removed borders, shadows, and movement animations */
+    height: 100%; /* Ensures all cards in a row stretch to the same height */
 }
 
-/* Card Image */
 .project-card img {
     width: 100%;
     aspect-ratio: 4 / 3; 
     object-fit: cover;   
     margin: 0 !important; 
-    display: block; /* Prevents tiny gaps between image and text box */
+    display: block; 
 }
 
-/* Card Text Box */
 .project-caption {
     padding: 1rem;
     text-align: center;
-    font-size: 1.1rem; /* Scaled down slightly to match the smaller box */
+    font-size: 1.1rem;
     font-family: 'Cardo', serif;
-    /* Uses the Night Mode dark color in Day Mode */
     background-color: #111111; 
-    color: #f8f3ea; /* Off-white text to contrast the dark background */
+    color: #f8f3ea;
+    
+    /* Forces the text box to always fill remaining space equally */
+    flex-grow: 1; 
+    display: flex;
+    align-items: center;      /* Vertically centers the text */
+    justify-content: center;  /* Horizontally centers the text */
+    min-height: 80px;         /* Gives an absolute baseline size so all boxes match exactly */
 }
 
-/* Hover Effect: Text box turns red, text turns white */
+/* Hover Effect */
 .project-card:hover .project-caption {
     background-color: var(--hover-link-color);
     color: #ffffff;
@@ -130,7 +160,6 @@ body.night-mode main article h2.gallery-title {
 }
 
 body.night-mode .project-caption {
-    /* A slightly lighter gray to stand out from the black Night Mode background */
     background-color: #2a2a2a; 
 }
 
@@ -154,35 +183,64 @@ body.night-mode .project-caption {
 
             <div class="portfolio-gallery">
             
+            <div class="gallery-top-row">
+                <section class="gallery-category">
+                    <h2 class="gallery-title">Technical Projects</h2>
+                    <div class="project-grid two-cols">
+                        
+                        <a href="projects_LUSI.html" class="project-card">
+                            <img src="assets/LUSI_thumbnail.jpg" alt="Mars Rover">
+                            <div class="project-caption">Mars Rover Hardware (LUSI)</div>
+                        </a>
+
+                        <a href="#" class="project-card">
+                            <img src="assets/placeholder.jpg" alt="Automated Test">
+                            <div class="project-caption">Automated Test Fixture</div>
+                        </a>
+
+                    </div>
+                </section>
+
+                <section class="gallery-category">
+                    <h2 class="gallery-title">Work Experience</h2>
+                    <div class="project-grid two-cols">
+                        
+                        <a href="#" class="project-card">
+                            <img src="assets/company1.jpg" alt="Internship 1">
+                            <div class="project-caption">Mechanical Engineering Intern @ XYZ</div>
+                        </a>
+
+                        <a href="#" class="project-card">
+                            <img src="assets/company2.jpg" alt="Internship 2">
+                            <div class="project-caption">Co-op @ ABC Robotics</div>
+                        </a>
+
+                    </div>
+                </section>
+            </div>
+
             <section class="gallery-category">
-                <h2 class="gallery-title">Technical Projects</h2>
-                <div class="project-grid">
-                    
-                    <a href="projects_LUSI.html" class="project-card">
-                        <img src="assets/LUSI_thumbnail.jpg" alt="Mars Rover">
-                        <div class="project-caption">Mars Rover Hardware (LUSI)</div>
-                    </a>
-
-                    <a href="#" class="project-card">
-                        <img src="assets/placeholder.jpg" alt="Project Two">
-                        <div class="project-caption">Automated Test Fixture</div>
-                    </a>
-
-                    <a href="#" class="project-card">
-                        <img src="assets/placeholder.jpg" alt="Project Three">
-                        <div class="project-caption">CNC Machined Assembly</div>
-                    </a>
-
-                </div>
-            </section>
-
-            <section class="gallery-category">
-                <h2 class="gallery-title">Work Experience</h2>
-                <div class="project-grid">
+                <h2 class="gallery-title">Personal Projects</h2>
+                <div class="project-grid four-cols">
                     
                     <a href="#" class="project-card">
-                        <img src="assets/company_logo_or_photo.jpg" alt="Internship">
-                        <div class="project-caption">Mechanical Engineering Intern @ XYZ</div>
+                        <img src="assets/placeholder.jpg" alt="Project A">
+                        <div class="project-caption">Custom 3D Printer</div>
+                    </a>
+
+                    <a href="#" class="project-card">
+                        <img src="assets/placeholder.jpg" alt="Project B">
+                        <div class="project-caption">Drone Frame Design</div>
+                    </a>
+
+                    <a href="#" class="project-card">
+                        <img src="assets/placeholder.jpg" alt="Project C">
+                        <div class="project-caption">Arduino Weather Station</div>
+                    </a>
+
+                    <a href="#" class="project-card">
+                        <img src="assets/placeholder.jpg" alt="Project D">
+                        <div class="project-caption">Combat Robotics</div>
                     </a>
 
                 </div>
