@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=EB+Garamond&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="project-style.css">
+    
+    <style>
+        /* === HOMEPAGE SPECIFIC OVERRIDES === */
+        
+        /* Remove the sidebar padding for the homepage */
+        main {
+            padding-left: 0 !important; 
+        }
+
+        /* Fix the opening image so it doesn't need to compensate for the sidebar */
+        .opening-image {
+            width: 100% !important;
+            margin-left: 0 !important;
+        }
+
+        /* Center the fake-medium title */
+        h1.home-title {
+            text-align: center;
+            font-size: 4.5rem;
+            font-weight: 400;
+            color: #001a29;
+            -webkit-text-stroke: 0.8px #001a29;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        /* === NIGHT MODE VARIABLES & OVERRIDES === */
+        body.night-mode {
+            --bg-color: #111111;         /* Deep black/grey background */
+            --text-color: #f8f3ea;       /* Warm off-white text */
+            --sidebar-color: #7da5c4;    /* Lighter blue for links/sidenote numbers so they pop on dark */
+            --sidenote-color: #8da38d;   /* Lighter, desaturated forest green */
+            --hover-link-color: #d97370; /* Lighter rust for hover states */
+        }
+
+        /* Update the fake-medium stroke to be white in night mode */
+        body.night-mode h1.home-title,
+        body.night-mode h1, 
+        body.night-mode h2, 
+        body.night-mode h3 {
+            color: var(--text-color);
+            -webkit-text-stroke: 0.8px var(--text-color);
+        }
+
+        /* Ensure skills pills look good in night mode */
+        body.night-mode .skill-pill {
+            background-color: #222;
+            color: var(--text-color);
+            border: 1px solid #444;
+        }
+        
+        body.night-mode .skill-category-label {
+            color: var(--sidebar-color);
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <img id="hero-image" src="assets/day-hero.jpg" alt="Welcome to my portfolio" class="opening-image">
+
+        <article>
+            <h1 class="home-title">Welcome</h1>
+
+            <p>
+                Hello, I'm an engineer specializing in hardware development, mechanical design, and robotics. This portfolio serves as a living document of my work, including my time as the Driveline, Chassis, and Suspension Lead for the Lehigh University Space Initiative (LUSI).
+            </p>
+
+            <p>
+                Below you will find a selection of my featured projects. 
+                <label for="sn-home" class="margin-toggle sidenote-number"></label>
+                <input type="checkbox" id="sn-home" class="margin-toggle"/>
+                <span class="sidenote">If you are visiting this site after 6:00 PM, you are currently seeing the Night Theme. The typography, sidenotes, and hero image have automatically adjusted for a low-light reading experience.</span>
+                Feel free to explore the documentation, schematics, and design philosophies that drive my engineering process.
+            </p>
+
+            <h2>Featured Projects</h2>
+            <ul>
+                <li><a href="projects_LUSI.html">LUSI: Mars Rover Hardware Development</a></li>
+                <li><a href="#">Project Two: Placeholder Title</a></li>
+                <li><a href="#">Project Three: Placeholder Title</a></li>
+            </ul>
+
+        </article>
+    </main>
+
+    <script>
+        function applyTimeTheme() {
+            const hour = new Date().getHours();
+            const heroImg = document.getElementById('hero-image');
+            
+            // Check if it's between 6:00 PM (18) and 5:59 AM (5)
+            if (hour >= 18 || hour < 6) {
+                // It is NIGHT
+                document.body.classList.add('night-mode');
+                heroImg.src = 'assets/night_banner.jpg'; 
+            } else {
+                // It is DAY
+                document.body.classList.remove('night-mode');
+                heroImg.src = 'assets/day_banner.jpg'; 
+            }
+        }
+
+        // Run the script immediately when the page loads
+        applyTimeTheme();
+    </script>
+</body>
+</html>
