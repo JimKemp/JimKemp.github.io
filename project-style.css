@@ -111,7 +111,7 @@ article video {
 
 /* === SKILLS PILLS === */
 .skills-section {
-    margin: 1rem 0 2rem 0;
+    margin: 1rem -45% 2rem 0;
     font-family: 'EB Garamond', serif;
 }
 
@@ -187,6 +187,8 @@ article video {
     main { padding-left: 2rem; padding-right: 2rem; }
     .opening-image { width: calc(100% + 4rem); margin-left: -2rem; margin-right: -2rem; }
     article { margin: 2rem; padding-right: 0; }
+
+    .skills-section { margin-right: 0; }
     .sidenote {
         display: none;
         float: none;
