@@ -115,14 +115,14 @@
             if (hour >= 18 || hour < 6) {
                 // It is NIGHT
                 
+                document.body.classList.add('night-mode');
+                heroImg.src = 'Assets/night_banner.jpg'; 
 
-                document.body.classList.remove('night-mode');
-                heroImg.src = 'Assets/day_banner.jpg'; 
             } else {
                 // It is DAY
 
-                document.body.classList.add('night-mode');
-                heroImg.src = 'Assets/night_banner.jpg'; 
+                document.body.classList.remove('night-mode');
+                heroImg.src = 'Assets/day_banner.jpg'; 
                 
             }
         }
