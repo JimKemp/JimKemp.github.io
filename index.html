@@ -27,6 +27,21 @@
             text-align: center;           /* Centers all text inside the article */
         }
 
+        main article p, 
+        main article ul, 
+        main article h2 {
+            max-width: 650px;              /* Standard comfortable reading width */
+            margin-left: auto !important;  /* Centers the narrowed block */
+            margin-right: auto !important; /* Centers the narrowed block */
+            text-align: center;            /* Keeps text centered within the narrow block */
+            line-height: 1.8;              /* Slightly more breathing room for body text */
+        }
+
+        main article ul {
+            list-style-position: inside;
+            padding: 0;
+        }
+
         /* Fix the opening image so it doesn't need to compensate for the sidebar */
         .opening-image {
             width: 100% !important;
