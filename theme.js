@@ -13,9 +13,9 @@ function applyTimeTheme() {
     const heroImg = document.getElementById('hero-image');
     if (heroImg) {
         if (isNight) {
-            heroImg.src = 'assets/night_banner.jpg'; 
+            heroImg.src = 'Assets/night_banner.jpg'; 
         } else {
-            heroImg.src = 'assets/day_banner.jpg'; 
+            heroImg.src = 'Assets/day_banner.jpg'; 
         }
     }
 }
