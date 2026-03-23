@@ -61,6 +61,91 @@
             margin-bottom: 2rem;
         }
 
+        /* === PORTFOLIO GALLERY GRID === */
+
+.portfolio-gallery {
+    margin-top: 4rem;
+    width: 100%;       /* Allow the grid to use the full 1100px width */
+    text-align: left;  /* Reset text alignment for the grid */
+}
+
+.gallery-category {
+    margin-bottom: 4rem;
+}
+
+/* Override the narrow, centered h2 rules from earlier */
+main article h2.gallery-title {
+    max-width: 100%;
+    margin-left: 0 !important;
+    text-align: left;
+    font-size: 2.2rem;
+    color: var(--sidebar-color);
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.project-grid {
+    display: grid;
+    /* This automatically creates as many columns as will fit, no smaller than 280px */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* The Card Itself */
+.project-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    border: 1px solid #dcd5c6; /* A slightly darker warm grey for the border */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover Animation: Lift up and drop a shadow */
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 40, 60, 0.1); /* Subtle dark blue shadow */
+    text-decoration: none; /* Prevents underline on hover */
+}
+
+/* Card Image */
+.project-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3; /* Forces all images to be the exact same size regardless of original crop */
+    object-fit: cover;   /* Crops the image to fill the box without squishing */
+    margin: 0 !important; /* Overrides the huge margins your default images have */
+}
+
+/* Card Label/Caption */
+.project-caption {
+    padding: 1.2rem 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Cardo', serif; /* Using Cardo for the titles looks classy */
+    border-top: 1px solid #dcd5c6;
+}
+
+/* === NIGHT MODE OVERRIDES FOR GALLERY === */
+body.night-mode main article h2.gallery-title {
+    color: var(--text-color);
+    border-bottom-color: #444;
+}
+
+body.night-mode .project-card {
+    border-color: #333;
+    background-color: #1a1a1a;
+}
+
+body.night-mode .project-caption {
+    border-top-color: #333;
+}
+
+body.night-mode .project-card:hover {
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.05); /* Soft white shadow in the dark */
+}
+
     </style>
 </head>
 <body>
@@ -79,12 +164,43 @@
                 For potential employers, my resume is availible <a href="https://jimkemp.github.io/Kemp_resume_WS26.pdf">at this link </a>
             </p>
 
-            <h2>Featured Projects</h2>
-            <ul>
-                <li><a href="projects_LUSI.html">LUSI: Mars Rover Hardware Development</a></li>
-                <li><a href="#">Project Two: Placeholder Title</a></li>
-                <li><a href="#">Project Three: Placeholder Title</a></li>
-            </ul>
+            <div class="portfolio-gallery">
+            
+            <section class="gallery-category">
+                <h2 class="gallery-title">Technical Projects</h2>
+                <div class="project-grid">
+                    
+                    <a href="projects_LUSI.html" class="project-card">
+                        <img src="assets/LUSI_thumbnail.jpg" alt="Mars Rover">
+                        <div class="project-caption">Mars Rover Hardware (LUSI)</div>
+                    </a>
+
+                    <a href="#" class="project-card">
+                        <img src="assets/placeholder.jpg" alt="Project Two">
+                        <div class="project-caption">Automated Test Fixture</div>
+                    </a>
+
+                    <a href="#" class="project-card">
+                        <img src="assets/placeholder.jpg" alt="Project Three">
+                        <div class="project-caption">CNC Machined Assembly</div>
+                    </a>
+
+                </div>
+            </section>
+
+            <section class="gallery-category">
+                <h2 class="gallery-title">Work Experience</h2>
+                <div class="project-grid">
+                    
+                    <a href="#" class="project-card">
+                        <img src="assets/company_logo_or_photo.jpg" alt="Internship">
+                        <div class="project-caption">Mechanical Engineering Intern @ XYZ</div>
+                    </a>
+
+                </div>
+            </section>
+
+        </div>
 
         </article>
     </main>
