@@ -78,6 +78,12 @@ h1, h2, h3 {
     font-weight: normal;
 }
 
+h1 {
+    font-size: 3.5rem; 
+    line-height: 1.1;  
+    margin-bottom: 1.5rem;
+}
+
 article {
     max-width: 600px;
     margin: 4rem auto;
