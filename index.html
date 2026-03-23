@@ -13,6 +13,18 @@
         /* Remove the sidebar padding for the homepage */
         main {
             padding-left: 0 !important; 
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        main article {
+            margin: 2rem auto !important; /* Centers the box on the page */
+            max-width: 800px;             /* Keeps lines from getting too long to read */
+            padding-right: 0 !important;  /* Removes the gap kept for sidenotes */
+            width: 90%;                   /* Responsive width */
+            text-align: center;           /* Centers all text inside the article */
         }
 
         /* Fix the opening image so it doesn't need to compensate for the sidebar */
