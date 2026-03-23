@@ -109,6 +109,43 @@ article video {
     margin: 3rem 0;
 }
 
+/* === SKILLS PILLS === */
+.skills-section {
+    margin: 1rem 0 2rem 0;
+    font-family: 'EB Garamond', serif;
+}
+
+.skills-title {
+    font-family: 'Cardo', serif;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--sidebar-color);
+}
+
+.skill-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.skill-category-label {
+    font-weight: bold;
+    color: var(--sidebar-color);
+    margin-right: 0.25rem;
+    font-size: 1rem;
+}
+
+.skill-pill {
+    background-color: #e2dfd8; /* Solid grey that fits the warm theme */
+    color: var(--text-color);
+    padding: 0.2rem 0.8rem;
+    border-radius: 999px; /* Creates the perfect pill shape */
+    font-size: 0.9rem;
+    line-height: 1.3;
+}
+
 /* === TUFTE SIDENOTES === */
 .margin-toggle {
     display: none;
