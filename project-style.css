@@ -29,11 +29,16 @@ body {
     background-color: var(--sidebar-color);
     transition: width 0.3s ease;
     overflow: hidden;
-    z-index: 1000;
+    
+    z-index: 5;
+    transition: width 0.3s ease, z-index 0s linear 0.3s; /* Waits 0.3s before dropping behind the image */
+
 }
 
 .sidebar:hover, .sidebar:focus-within {
     width: 250px;
+    z-index: 1000; /* Jumps to the very front */
+    transition: width 0.3s ease, z-index 0s linear 0s;
 }
 
 .nav-content {
@@ -99,6 +104,9 @@ article a:hover {
     display: block;
     height: auto;
     object-fit: cover;
+
+    position: relative;
+    z-index: 10;
 }
 
 article img:not(.opening-image), 
