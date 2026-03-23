@@ -63,12 +63,22 @@
 
                 <img src="Assets/burn_line.png" alt="Diagram of Burn line from my report">
 
+                <p><i>Above: Excerpt from my 2022 Research Report</i><br><br><br>
+
+                    After conducting reaserch into both how controlled burns were conducted and past attempts at using robots for this task, I set out build a robot demonstrating capabilites nessecary for a controlled burn.
+                    A clear opportunity for a robot to improve upon a human's firefighting capacilities would be the use of hyperspectral imaging 
+                    - by combining a visual-spectrum and infrared camera, my robot could see heat signatures and better analyze fires.
+                    The thermal camera would allow the robot to detect easily if an area outside the specified zone had caught fire, or if the burn it was conducting was reaching an unsafe heat.
+                    I had previously experimented with using ROS to connect a low-level, hardware managing microcontroller like an Arduino to a more sophisticated SBC like the Raspberry Pi. 
+                    This setup would be ideal, because it would free up the Raspberry Pi to deal with processing the feeds from the visual-spectrum and IR cameras, as well as running a simple supervised-learning algorithm identify and fit a bounding box to a fire.
+                </p>
+
+                <img src="Assets/sdp_imager.png" alt="Testing the hyperspectral imager and machine learning algorithm">
                 
-                This is your project description text. 
                 <label for="sn-1" class="margin-toggle sidenote-number"></label>
                 <input type="checkbox" id="sn-1" class="margin-toggle"/>
                 <span class="sidenote">This sidenote stays green and floats to the right!</span>
-                The layout remains clean and focuses on your documentation.
+               
             </p>
             
             <img src="assets/diagram.png" alt="Hardware Diagram">
