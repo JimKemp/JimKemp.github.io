@@ -27,18 +27,18 @@ body {
     height: 100vh;
     width: 16px;
     background-color: var(--sidebar-color);
-    transition: width 0.3s ease;
     overflow: hidden;
     
     z-index: 5;
-    transition: width 0.3s ease, z-index 0s linear 0.3s; /* Waits 0.3s before dropping behind the image */
-
+    /* step-end tells it to wait until the 0.3s width slide is 100% finished before dropping to the back */
+    transition: width 0.3s ease, z-index 0s step-end 0.3s;
 }
 
 .sidebar:hover, .sidebar:focus-within {
     width: 250px;
-    z-index: 1000; /* Jumps to the very front */
-    transition: width 0.3s ease, z-index 0s linear 0s;
+    z-index: 1000; 
+    /* step-start tells it to jump to the very front instantly so it can slide out over the image */
+    transition: width 0.3s ease, z-index 0s step-start 0s;
 }
 
 .nav-content {
@@ -113,6 +113,8 @@ article a:hover {
 
     position: relative;
     z-index: 10;
+
+    background-color: var(--bg-color);
 }
 
 article img:not(.opening-image), 
