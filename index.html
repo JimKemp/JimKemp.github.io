@@ -46,34 +46,6 @@
             margin-bottom: 2rem;
         }
 
-        /* === NIGHT MODE VARIABLES & OVERRIDES === */
-        body.night-mode {
-            --bg-color: #111111;         /* Deep black/grey background */
-            --text-color: #f8f3ea;       /* Warm off-white text */
-            --sidebar-color: #7da5c4;    /* Lighter blue for links/sidenote numbers so they pop on dark */
-            --sidenote-color: #8da38d;   /* Lighter, desaturated forest green */
-            --hover-link-color: #d97370; /* Lighter rust for hover states */
-        }
-
-        /* Update the fake-medium stroke to be white in night mode */
-        body.night-mode h1.home-title,
-        body.night-mode h1, 
-        body.night-mode h2, 
-        body.night-mode h3 {
-            color: var(--text-color);
-            -webkit-text-stroke: 0.8px var(--text-color);
-        }
-
-        /* Ensure skills pills look good in night mode */
-        body.night-mode .skill-pill {
-            background-color: #222;
-            color: var(--text-color);
-            border: 1px solid #444;
-        }
-        
-        body.night-mode .skill-category-label {
-            color: var(--sidebar-color);
-        }
     </style>
 </head>
 <body>
