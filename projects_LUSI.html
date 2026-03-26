@@ -94,9 +94,13 @@ To break this cycle, I began developing the Field Rover System (FRS) to enforce 
 <strong>Reliable Low-Level Architecture:</strong> The FRS operates as an independent, low-level architecture utilizing a highly stable STM32 microcontroller and a 6-meter band ham radio (utilizing my personal ham radio license) to ensure constant, reliable communication at great distances.
 </p><p style="text-indent: 40px;">
 <strong>System-agnostic Modularity</strong> Our power distribution board handles both 12V and 24V, and the software separates motor controller libraries from the main codebase. If future teams change the motors, they simply swap the library—not the entire code.
-</p><p style="text-indent: 40px;">
+</p>
+            <img src="Assets/FRS_hardware_flowchart.png" alt="FRS Hardware Flowchart"> <i>FRS Hardware Flowchart. Integrated systems share borders, while systems linked by lines are independent enough to be modular/swappable</i>
+            <p style="text-indent: 40px;">
 <strong>The Intelligence Layer: </strong>Eventually, we will build an "Intelligence Layer" on top of the FRS. By integrating onboard GPS and accelerometers, the rover will be able to interpret nuanced commands (e.g., "drive one meter forward") and use self-healing algorithms to automatically compensate in real-time if a motor underperforms.
-</p><p>
+</p>
+             <img src="Assets/frs_software_flowchart.png" alt="FRS software Flowchart"><i>FRS Software flowchart, demonstrating the flow of different level commands and the modularity of the software architecture.</i>
+            <p>
 By establishing this modular baseline, future LUSI teams won't have to reinvent the wheel. They will inherit a reliable foundation that allows them to start driving immediately and spend their year iterating toward perfection.</p>
         </p>   
             <label for="sn-1" class="margin-toggle sidenote-number"></label>
