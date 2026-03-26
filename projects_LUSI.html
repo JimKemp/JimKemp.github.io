@@ -93,7 +93,7 @@ To break this cycle, I began developing the Field Rover System (FRS) to enforce 
 </p><p style="text-indent: 40px;">
 <strong>Reliable Low-Level Architecture:</strong> The FRS operates as an independent, low-level architecture utilizing a highly stable STM32 microcontroller and a 6-meter band ham radio (utilizing my personal ham radio license) to ensure constant, reliable communication at great distances.
 </p><p style="text-indent: 40px;">
-<strong>Future-Proof Modularity: The system is agnostic.</strong> Our power distribution board handles both 12V and 24V, and the software separates motor controller libraries from the main codebase. If future teams change the motors, they simply swap the library—not the entire code.
+<strong>System-agnostic Modularity</strong> Our power distribution board handles both 12V and 24V, and the software separates motor controller libraries from the main codebase. If future teams change the motors, they simply swap the library—not the entire code.
 </p><p style="text-indent: 40px;">
 <strong>The Intelligence Layer: </strong>Eventually, we will build an "Intelligence Layer" on top of the FRS. By integrating onboard GPS and accelerometers, the rover will be able to interpret nuanced commands (e.g., "drive one meter forward") and use self-healing algorithms to automatically compensate in real-time if a motor underperforms.
 </p><p>
