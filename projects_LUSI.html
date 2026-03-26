@@ -61,40 +61,40 @@
 
 I joined LUSI at a difficult time for the team—much of our engineering knowledge was concentrated in a few senior members, so any graduation was a huge blow. Many projects were left incomplete, and we struggled with mechanical reliability. However, LUSI remains a fantastic educational experience, the only engineering club to offer triple exposure to mechanical, electrical, and software development. The community of really committed members is wonderful, and the team is closely knit.
                </p><p>
-Early Contributions and Mechanical Reliability
+
 I initially joined the Driveline, Chassis, and Suspension (DCS) team because it tackles some of the rover's most critical mechanical challenges. During my first year, my focus was on structural integrity and practical experimentation to get our hardware competition-ready.
 </p><p style="text-indent: 40px;">
-Internal Chassis Structure: I designed and 3D-printed the internal webbing of the chassis—essentially the rover's skeleton—to securely mount our circuit boards, batteries, and E-stop in their precise positions.
+<strong>Internal Chassis Structure:</strong> I designed and 3D-printed the internal webbing of the chassis—essentially the rover's skeleton—to securely mount our circuit boards, batteries, and E-stop in their precise positions.
 </p><p style="text-indent: 40px;">
-Wheel Tread Optimization: To determine the most effective 3D-printed wheel design, I built a testbed filled with dirt and rocks to approximate Martian terrain. Using force meters and a servo motor, I tested the slip thresholds of various tread patterns in transverse and longitudinal directions, allowing me to mathematically calculate the ideal design.
+<strong>Wheel Tread Optimization:</strong> To determine the most effective 3D-printed wheel design, I built a testbed filled with dirt and rocks to approximate Martian terrain. Using force meters and a servo motor, I tested the slip thresholds of various tread patterns in transverse and longitudinal directions, allowing me to mathematically calculate the ideal design.
 </p><p style="text-indent: 40px;">
-Suspension Stabilization: Our rocker-bogie suspension had a critical flaw where the rockers would "kick" during turns, effectively preventing the rover from steering. I intervened by widening the wheelbase to enable skid steering and designed a custom spring system. This applied continuous pressure to the bogies, allowing the suspension to articulate over obstacles while preventing it from flopping under inertial forces.
+<strong>Suspension Stabilization:</strong> Our rocker-bogie suspension had a critical flaw where the rockers would "kick" during turns, effectively preventing the rover from steering. I intervened by widening the wheelbase to enable skid steering and designed a custom spring system. This applied continuous pressure to the bogies, allowing the suspension to articulate over obstacles while preventing it from flopping under inertial forces.
 </p><p style="text-indent: 40px;">
-Soil Analysis Delivery System: We struggled to transport extracted dirt from the soil drill into the chemical analysis chambers. To solve this, I built a ramp equipped with a vibrating motor. This fluidized the soil, ensuring it diverted smoothly into the correct chambers for spectrometer analysis and photography.
+<strong>Soil Analysis Delivery System:</strong> We struggled to transport extracted dirt from the soil drill into the chemical analysis chambers. To solve this, I built a ramp equipped with a vibrating motor. This fluidized the soil, ensuring it diverted smoothly into the correct chambers for spectrometer analysis and photography.
 </p><p style="text-indent: 40px;">
-Antenna Mount: I designed a heavy-duty, folding mount to support our large antenna, ensuring it remained durable while strictly adhering to the competition's size constraints.
+<strong>Antenna Mount:</strong> I designed a heavy-duty, folding mount to support our large antenna, ensuring it remained durable while strictly adhering to the competition's size constraints.
 </p><p>
 Leadership: Advancing Technology and Human Capital
 When I became the Driveline, Chassis, and Suspension team lead, I set out to improve both LUSI's technology and human capital management.
 </p><p style="text-indent: 40px;">
-The First All-Metal Suspension: Historically, the team relied heavily on 3D-printed structural parts that were prone to shaking loose or breaking. I designed LUSI’s first entirely metal, welded suspension. To execute this, I trained my team members on both CNC milling and welding equipment—directly addressing our need to distribute hands-on manufacturing skills and prevent knowledge silos.
+<strong>The First All-Metal Suspension:</strong> Historically, the team relied heavily on 3D-printed structural parts that were prone to shaking loose or breaking. I designed LUSI’s first entirely metal, welded suspension. To execute this, I trained my team members on both CNC milling and welding equipment—directly addressing our need to distribute hands-on manufacturing skills and prevent knowledge silos.
 </p><p style="text-indent: 40px;">
-Crab-Style Steering & Weight Optimization: To solve our past struggles with tight turns, I led the transition to a crab-style steering setup. Recognizing this would push us over the weight limit, I conducted testing that proved we could safely reduce the rover from six wheels to four (two per side). We maintained necessary traction while vastly improving maneuverability.
+<strong>Crab-Style Steering & Weight Optimization:</strong> To solve our past struggles with tight turns, I led the transition to a crab-style steering setup. Recognizing this would push us over the weight limit, I conducted testing that proved we could safely reduce the rover from six wheels to four (two per side). We maintained necessary traction while vastly improving maneuverability.
 </p><p style="text-indent: 40px;">
-Robust Drive Mechanics: Designing the crab steering was mechanically complex. I encased the main motor shaft in a thicker metal outer shaft to absorb the physical forces of the wheels. By placing it in double shear and using a dual-bearing system—a radial bearing to prevent inward/outward canting and a thrust bearing to support the rover's full weight—we created a highly durable drive system that allowed the rover to parallel park in incredibly tight spaces.
+<strong>Robust Drive Mechanics:</strong> Designing the crab steering was mechanically complex. I encased the main motor shaft in a thicker metal outer shaft to absorb the physical forces of the wheels. By placing it in double shear and using a dual-bearing system—a radial bearing to prevent inward/outward canting and a thrust bearing to support the rover's full weight—we created a highly durable drive system that allowed the rover to parallel park in incredibly tight spaces.
 </p><p>
 Mitigating Technical Debt: The Field Rover System (FRS)
 Despite our mechanical improvements, the structural issues of the team remained. The concentration of knowledge meant that graduating seniors left behind "technical debt"—undocumented software and unfinished hardware—forcing the team to start over each year. Furthermore, mechanical teams were often delayed because they could not test their designs until the electrical and software teams finished their respective overhauls.
 
 To break this cycle, I began developing the Field Rover System (FRS) to enforce high modularity and enable more design cycles.
 </p><p style="text-indent: 40px;">
-Analog Test Platform: We are building a dedicated test rover out of 80/20 aluminum extrusion. It is easily reconfigurable, allowing the mechanical team to test dozens of suspension geometries and log over 100 hours of drive time entirely independent of the final competition rover's development.
+<strong>Analog Test Platform:</strong> We are building a dedicated test rover out of 80/20 aluminum extrusion. It is easily reconfigurable, allowing the mechanical team to test dozens of suspension geometries and log over 100 hours of drive time entirely independent of the final competition rover's development.
 </p><p style="text-indent: 40px;">
-Reliable Low-Level Architecture: The FRS operates as an independent, low-level architecture utilizing a highly stable STM32 microcontroller and a 6-meter band ham radio (utilizing my personal ham radio license) to ensure constant, reliable communication at great distances.
+<strong>Reliable Low-Level Architecture:</strong> The FRS operates as an independent, low-level architecture utilizing a highly stable STM32 microcontroller and a 6-meter band ham radio (utilizing my personal ham radio license) to ensure constant, reliable communication at great distances.
 </p><p style="text-indent: 40px;">
-Future-Proof Modularity: The system is agnostic. Our power distribution board handles both 12V and 24V, and the software separates motor controller libraries from the main codebase. If future teams change the motors, they simply swap the library—not the entire code.
+<strong>Future-Proof Modularity: The system is agnostic.</strong> Our power distribution board handles both 12V and 24V, and the software separates motor controller libraries from the main codebase. If future teams change the motors, they simply swap the library—not the entire code.
 </p><p style="text-indent: 40px;">
-The Intelligence Layer: Eventually, we will build an "Intelligence Layer" on top of the FRS. By integrating onboard GPS and accelerometers, the rover will be able to interpret nuanced commands (e.g., "drive one meter forward") and use self-healing algorithms to automatically compensate in real-time if a motor underperforms.
+<strong>The Intelligence Layer: </strong>Eventually, we will build an "Intelligence Layer" on top of the FRS. By integrating onboard GPS and accelerometers, the rover will be able to interpret nuanced commands (e.g., "drive one meter forward") and use self-healing algorithms to automatically compensate in real-time if a motor underperforms.
 </p><p>
 By establishing this modular baseline, future LUSI teams won't have to reinvent the wheel. They will inherit a reliable foundation that allows them to start driving immediately and spend their year iterating toward perfection.</p>
         </p>   
